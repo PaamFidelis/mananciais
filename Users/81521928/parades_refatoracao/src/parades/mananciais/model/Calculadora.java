@@ -45,10 +45,11 @@ public class Calculadora {
 	}
 
 	public double calcularVariacaoDiaria(Medicao anterior, Medicao atual) {
+   double volume = anterior.getVolume();
 		if (anterior == null)
 			return 0;
 		else
-			return ((atual.getVolume() / anterior.getVolume()) - 1) * 100;
+			return ((atual.getVolume() / volume) - 1) * 100;
 
 	}
 }
